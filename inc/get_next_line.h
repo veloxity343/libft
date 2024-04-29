@@ -9,6 +9,8 @@
 
 # endif
 
+/* ---------- GNL ---------- */
+
 char	*trim_buffer(char *buffer);
 char	*extract_line(char *buffer);
 char	*join_free(char *res, char *buffer);
