@@ -14,18 +14,19 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*ptr;
+	void	*dest;
+	size_t	total_size;
 
-	if (!count || !size)
+	if ((size != 0 && count > UINT_MAX / size)
+		|| (count != 0 && size > UINT_MAX / count))
+		dest = NULL;
+	else
 	{
-		count = 1;
-		size = 1;
+		total_size = count * size;
+		dest = malloc(total_size);
+		if (!dest)
+			return (0);
+		dest = ft_memset(dest, 0, total_size);
 	}
-	if (size > 2147483647 / count)
-		return (0);
-	ptr = (void *)malloc(size * count);
-	if (!ptr)
-		return (0);
-	ft_bzero(ptr, count * size);
-	return (ptr);
+	return (dest);
 }
