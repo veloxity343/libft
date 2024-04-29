@@ -26,7 +26,7 @@ t_flags	ft_flag_width(va_list args, t_flags flags);
 int		ft_flag_precision(const char *str, int i, va_list args, t_flags *flags);
 int		ft_pad_width(int width, int size, int zero);
 
-/* ---------- SPECs ---------- */
+/* ---------- SPECS ---------- */
 
 // c
 int		ft_print_char(int c, t_flags flags);
