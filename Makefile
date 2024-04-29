@@ -6,7 +6,7 @@ INC				= inc/
 SRC_DIR			= src/
 OBJ_DIR			= obj/
 
-# Compielr and Flags
+# Compiler and Flags
 CC				= cc
 CFLAGS			= -Wall -Wextra -Werror -I
 RM				= rm -f
