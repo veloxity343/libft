@@ -32,6 +32,7 @@ FTPUT_DIR		=	$(SRC_DIR)ft_put/ft_putchar_fd.c \
 					$(SRC_DIR)ft_put/ft_putstr_fd.c 
 
 FTTO_DIR		=	$(SRC_DIR)ft_to/ft_atoi.c \
+					$(SRC_DIR)ft_to/ft_atol.c \
 					$(SRC_DIR)ft_to/ft_itoa.c \
 					$(SRC_DIR)ft_to/ft_tolower.c \
 					$(SRC_DIR)ft_to/ft_toupper.c
@@ -79,7 +80,7 @@ GNL_DIR			=	$(SRC_DIR)get_next_line/get_next_line.c
 SRC 			= $(FTIS_DIR) $(FTMEM_DIR) $(FTPUT_DIR) $(FTTO_DIR) $(FTTO_DIR) $(FTSTR_DIR) $(FTLST_DIR) $(FTPRINTF_DIR) $(GNL_DIR)
 OBJ 			= $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRC))
 
-# Build rules
+# Build Rules
 all: 			$(NAME)
 
 $(NAME): 		$(OBJ)
